@@ -1,0 +1,67 @@
+<html>
+<head>
+
+	<title>Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  
+  <style>
+ .heading
+{
+font-size: 35px;
+width: 100%;
+margin: 0px;
+}
+canvas{
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px grey;
+    margin-top: 50px;
+}
+.back{
+  margin-top: 20px;
+}
+  </style>
+</head>
+
+<body background="images.jpg">
+  <center>
+    <h1 class="btn btn-primary heading">Study</h1>
+    <h3 id="status" class="btn btn-info "></h3>
+    <button class="btn btn-success back" onclick="back()">Back</button>
+    
+
+  </center>
+
+  <script>
+    var objectDetector="";
+var status="";
+objects=[];
+function setup(){
+    canvas=createCanvas(640,420);
+    canvas.center();
+    document.getElementById("status").innerHTML="Status: Detecting Objects";
+}
+var img="";
+function preload(){
+    img=loadImage("stu.jpg");
+}
+function draw(){
+    image(img,0,0,640,420);
+    }
+
+function modelLoaded(){
+    console.log('Model Loaded!');
+}
+function back(){
+      window.location="index.html";
+    }
+  </script>
+
+</body>
+</html>

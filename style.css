@@ -1,0 +1,22 @@
+body{
+    background-size: cover;
+    background-position: center;
+}
+.heading
+{
+font-size: 35px;
+width: 100%;
+margin: 0px;
+}
+.bed,.living,.study
+{
+width:80%;
+border-radius: 20px;
+padding: 20px;
+font-size: 30px;
+box-shadow: 5px 5px 18px orange;
+margin: 10px;
+}
+.bed:hover,.living:hover,.study:hover{
+    background-color: rgb(165, 94, 231);
+}
